@@ -2,6 +2,4 @@
 set -e
 
 apt -y update
-apt -y install make
-
-BIN=/usr/local/bin make install-tools
+apt -y install curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev

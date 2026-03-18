@@ -14,9 +14,6 @@
       }
     }
   },
-  "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-  },
-  "image": "ubuntu:latest",
+  "image": "debian:bookworm-slim",
   "postCreateCommand": ".devcontainer/post-create.sh"
 }

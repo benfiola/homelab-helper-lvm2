@@ -1,4 +1,4 @@
-name: Build and Release LVM
+name: Build and Release LVM2
 
 on:
   workflow_call:
@@ -28,13 +28,13 @@ jobs:
         run: |
           bash source/build.sh \
             "${{ inputs.version }}" \
-            "lvm-${{ inputs.version }}-amd64.tar.gz"
+            "lvm2-${{ inputs.version }}-amd64.tar.gz"
 
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: lvm-${{ inputs.version }}-amd64
-          path: lvm-${{ inputs.version }}-amd64.tar.gz
+          name: lvm2-${{ inputs.version }}-amd64
+          path: lvm2-${{ inputs.version }}-amd64.tar.gz
 
   build-arm64:
     name: Build arm64 (${{ inputs.version }})
@@ -55,13 +55,13 @@ jobs:
         run: |
           bash source/build.sh \
             "${{ inputs.version }}" \
-            "lvm-${{ inputs.version }}-arm64.tar.gz"
+            "lvm2-${{ inputs.version }}-arm64.tar.gz"
 
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: lvm-${{ inputs.version }}-arm64
-          path: lvm-${{ inputs.version }}-arm64.tar.gz
+          name: lvm2-${{ inputs.version }}-arm64
+          path: lvm2-${{ inputs.version }}-arm64.tar.gz
 
   release:
     name: Create Release ${{ inputs.version }}
@@ -73,7 +73,7 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: lvm-*
+          pattern: lvm2-*
           path: artifacts
 
       - name: Create Release

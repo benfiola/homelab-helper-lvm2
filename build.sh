@@ -1,5 +1,5 @@
 #!/bin/sh
-# Builds LVM
+# Builds LVM2
 # Requires the following (debian) packages: curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
 set -e
 

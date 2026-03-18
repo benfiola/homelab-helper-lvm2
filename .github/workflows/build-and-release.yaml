@@ -1,7 +1,7 @@
 name: Build and Release LVM2
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       version:
         description: "Version to build and release"

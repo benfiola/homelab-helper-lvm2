@@ -1,5 +1,6 @@
 #!/bin/sh
 # Builds LVM2
+# Should be run in a debian:bookworm-slim image
 # Requires the following (debian) packages: curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
 set -e
 

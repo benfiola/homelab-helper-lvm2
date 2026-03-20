@@ -22,8 +22,8 @@ jobs:
 
       - name: Install build dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
+          apt -y update
+          apt -y install curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
 
       - name: Build
         run: |
@@ -50,8 +50,8 @@ jobs:
 
       - name: Install build dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
+          apt -y update
+          apt -y install -y curl build-essential pkg-config libaio-dev libdevmapper-dev libudev-dev tar xfslibs-dev
 
       - name: Build
         run: |
